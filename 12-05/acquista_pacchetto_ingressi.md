@@ -1,15 +1,14 @@
-
 | **Nome del Caso d'Uso**              | Acquistare un pacchetto ingressi                                 |
 |--------------------------------------|----------------------------------------------------|
-| **Portata**                          | Il sistema di gestione della palestra permette ai clienti di acquistare un pacchetto ingressi. |
+| **Portata**                          | Il sistema di gestione della palestra permette a clienti o visitatori di acquistare un pacchetto ingressi. |
 | **Livello**                          | Obiettivo utente                                   |
-| **Attore Primario**                  | Cliente                                            |
-| **Parti Interessate e Interessi**    | - **Cliente**: desidera acquistare un pacchetto ingressi.<br> - **Sistema**: gestisce l'acquisto dei pacchetti. |
-| **Pre-condizioni**                   | - Il cliente deve essere **iscritto** alla palestra e avere una **tessera** valida.<br> - Il cliente deve essere abilitato a fare acquisti. |
-| **Garanzia di Successo**             | - Il cliente ha acquistato con successo un pacchetto ingressi.<br> - Il sistema ha registrato l'acquisto nel proprio database. |
-| **Scenario Principale di Successo**  | 1. Il cliente accede al sistema tramite la tessera.<br> 2. Il cliente seleziona il pacchetto ingressi che desidera acquistare.<br> 3. Il sistema mostra i pacchetti disponibili e il relativo prezzo.<br> 4. Il cliente conferma l'acquisto del pacchetto scelto.<br> 5. Il sistema registra l'acquisto e conferma al cliente che il pacchetto ingressi è stato acquistato con successo. |
-| **Estensioni**                       | - **Pagamento fallito**: Se il pagamento non va a buon fine, il sistema notifica l'errore al cliente e richiede un nuovo tentativo.<br> - **Pacchetto esaurito**: Se il pacchetto non è più disponibile, il sistema offre altri pacchetti. |
-| **Requisiti speciali**               | - Il sistema deve verificare che il cliente abbia fondi sufficienti per l'acquisto del pacchetto.<br> - Il sistema deve essere accessibile in tempo reale da dispositivi mobili e desktop. |
-| **Elenco delle variabili tecnologiche e dei dati** | - **Formato di ingresso**: Il cliente inserisce il suo identificativo tessera e seleziona il pacchetto.<br> - **Formato di uscita**: Conferma dell'acquisto con dettagli del pacchetto scelto e il prezzo pagato. |
-| **Frequenza di ripetizione**         | Il cliente può acquistare pacchetti ingressi su base occasionale, a seconda delle necessità. |
-| **Varie**                            | - Il sistema deve garantire che tutte le transazioni siano gestite correttamente anche in caso di errori di pagamento. |
+| **Attore Primario**                  | Cliente o Visitatore                               |
+| **Parti Interessate e Interessi**    | - **Cliente o Visitatore**: desidera acquistare un pacchetto ingressi.<br> - **Sistema**: gestisce e registra l’acquisto dei pacchetti. |
+| **Pre-condizioni**                   | - Il **cliente** deve essere **iscritto** alla palestra e avere una **tessera valida**.<br> - Il **visitatore** deve avere completato l'inserimento dei dati per l'iscrizione ed effettuare il pagamento contestualmente all'acquisto del pacchetto. |
+| **Garanzia di Successo**             | - Il cliente o visitatore ha acquistato con successo un pacchetto ingressi.<br> - Il sistema ha registrato l'acquisto e aggiornato lo stato del visitatore (se necessario) a cliente. |
+| **Scenario Principale di Successo**  | 1. Il cliente accede al sistema tramite la tessera **oppure** il visitatore accede come nuovo utente e inserisce i dati richiesti per l'iscrizione.<br> 2. L'utente seleziona il pacchetto ingressi da acquistare.<br> 3. Il sistema mostra i pacchetti disponibili e il relativo prezzo.<br> 4. L'utente conferma l'acquisto e procede al pagamento.<br> 5. Il sistema registra l'acquisto e, se si tratta di un visitatore, lo trasforma in cliente e genera la tessera. <br> 6. Il sistema conferma l’avvenuto acquisto. |
+| **Estensioni**                       | - **Pagamento fallito**: Il sistema notifica l'errore e consente un nuovo tentativo.<br> - **Pacchetto non disponibile**: Il sistema propone pacchetti alternativi.<br> - **Visitatore con dati incompleti**: Il sistema richiede il completamento dei dati prima di procedere. |
+| **Requisiti speciali**               | - Il sistema deve verificare che il cliente o visitatore abbia fondi sufficienti.<br> - Il sistema deve trasformare automaticamente un visitatore in cliente dopo l'acquisto.<br> - Il sistema deve essere accessibile in tempo reale da dispositivi mobili e desktop. |
+| **Elenco delle variabili tecnologiche e dei dati** | - **Formato di ingresso**: Per il cliente, identificativo tessera; per il visitatore, dati personali richiesti per l'iscrizione.<br> - **Formato di uscita**: Conferma dell'acquisto, dettagli del pacchetto, generazione tessera (per i nuovi clienti). |
+| **Frequenza di ripetizione**         | L’acquisto può essere effettuato ogni volta che l’utente desidera un nuovo pacchetto. |
+| **Varie**                            | - Il sistema deve garantire la tracciabilità e la sicurezza delle transazioni anche in presenza di errori. |
