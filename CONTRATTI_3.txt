@@ -1,0 +1,40 @@
+CONTRATTO ACQUISTA PACCHETTO INGRESSI
+Operazione di Sistema: AcquistaPacchettoIngresso(PacchettoIngresso:pacchetoIngresso)
+
+Riferimenti ai Casi d’Uso:
+AcquistarePacchetto (Permettere all’utente (cliente o visitatore) di acquistare un pacchetto ingressi tra quelli disponibili)
+
+Pre-condizioni:
+- Il cliente è autenticato tramite tessera, oppure il visitatore ha iniziato la procedura di iscrizione.
+- Sono presenti pacchetti ingressi disponibili nel sistema.
+
+Post-condizioni:
+- Il pacchetto viene caricato sulla tessera
+- Il visitatore diventa cliente
+- Il cliente resta tale
+
+Eccezioni:
+- Servizio non disponibile
+
+Modifiche:
+nel modello di dominio PacchettoIngressi diventa PacchettoIngesso
+__________________________________________________________________________________________________
+
+
+CONTRATTO ACQUISTA ABBONAMENTO
+Operazione di Sistema: AcquistaAbbonamento(Abbonamento:abbonamento)
+
+Riferimenti ai Casi d’Uso:
+AcquistareAbbonamento (Permettere all’utente (cliente o visitatore) di acquistare un abbonamento tra quelli disponibili)
+
+Pre-condizioni:
+- Il cliente è autenticato tramite tessera, oppure il visitatore ha iniziato la procedura di iscrizione.
+- Sono presenti abbonamenti disponibili nel sistema.
+
+Post-condizioni:
+- L'abboamento viene caricato sulla tessera dell'utente
+- Il visitatore diventa cliente
+- Il cliente resta tale
+
+Eccezioni:
+- Servizio non disponibile

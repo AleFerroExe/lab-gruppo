@@ -1,0 +1,37 @@
+CONTRATTO VISUALIZZA ELENCO DEI SERVIZI
+Operazione di Sistema: VisualizzaElencoServizi()
+
+Riferimenti ai Casi d’Uso:
+ConsultareServizi (Visualizzare l’elenco completo dei servizi offerti dalla palestra)
+
+Pre-condizioni:
+- Il sistema è disponibile e raggiungibile.
+- Esiste un elenco di servizi.
+
+Post-condizioni:
+- L’elenco dei servizi è stato presentato all’utente (cliente o visitatore) con nome e descrizione
+- L’utente è in grado di selezionare un servizio per ulteriori dettagli.
+
+Eccezioni:
+- Servizio non disponibile
+
+__________________________________________________________________________________________________
+
+
+CONTRATTO VISUALIZZA SERVIZIO CON ULTERIORI DETTAGGI
+Operazione di Sistema: VisualizzaDettaglio(Servizio:servizio)
+
+Riferimenti ai Casi d’Uso:
+ConsultareServizi (Visualizzare l’elenco completo dei servizi offerti dalla palestra)
+
+Pre-condizioni:
+- Il sistema è disponibile e raggiungibile.
+- Esiste un elenco di servizi.
+- L’utente ha selezionato un servizio valido dall’elenco.
+- Il servizio selezionato è presente nel sistema.
+
+Post-condizioni:
+- Il sistema mostra i dettagli del servizio: descrizione estesa, orari, prezzo, e tipologia (standard o servizio personalizzato).
+
+Eccezioni:
+- Servizio non disponibile

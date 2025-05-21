@@ -1,0 +1,33 @@
+CONTRATTO REGISTRA ISCRIZIONE
+Operazione di Sistema: RegistraIscrizione(nome:string, cognome:string, datadinascita:date, telefono:int, email:string)
+
+Riferimenti ai Casi d’Uso: IscriversiPalestra (Registra un nuovo iscritto nel sistema dopo che il pagamento è stato confermato)
+
+Pre-condizioni:
+- Il pagamento è stato confermato.,
+
+Post-condizioni:
+- Viene creato un nuovo oggetto Cliente nel sistema.,
+- Il Cliente viene associato a un Abbonamento.,
+- Viene assegnata una Tessera al Cliente.
+
+__________________________________________________________________________________________________
+
+
+CONTRATTO ACCESSO PALESTRA
+Operazione di Sistema: AccessoPalestra(Tessera:tessera)
+
+Riferimenti ai Casi d’Uso:
+AccederePalestra (controlla che all'interno dell'oggetto Tessera sia presente un iscrizione attiva e valida per l'area alla quale si vuole accedere)
+
+Pre-condizioni:
+- Il cliente deve aver sottoscritto almeno un abbonamento o un pacchetto
+- Per area premium il cliente deve aver acquistato l'accesso speciale all'area (piscina)
+
+Post-condizioni:
+- Accesso zona della palestra
+- Accesso prenotazione corsi nell'area della palestra selezionata
+
+Eccezioni:
+- Servizio non disponibile
+- Palestra chiusa
