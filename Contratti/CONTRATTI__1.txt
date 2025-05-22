@@ -1,33 +1,24 @@
-CONTRATTO REGISTRA ISCRIZIONE
-Operazione di Sistema: RegistraIscrizione(nome:string, cognome:string, datadinascita:date, telefono:int, email:string)
+CONTRATTO CreaPagamento
+Operazione di Sistema: CreaPagamento(idTrsansazione: String, import: int, data: Date)
 
-Riferimenti ai Casi d’Uso: IscriversiPalestra (Registra un nuovo iscritto nel sistema dopo che il pagamento è stato confermato)
+Riferimenti ai Casi d’Uso: IscriversiPalestra
 
 Pre-condizioni:
-- Il pagamento è stato confermato.,
+- Il Visitatore ha mandato la conferma per procedere con il pagamento
 
 Post-condizioni:
-- Viene creato un nuovo oggetto Cliente nel sistema.,
-- Il Cliente viene associato a un Abbonamento.,
-- Viene assegnata una Tessera al Cliente.
+- Un istanza p di pagamento é stata creata ed inizializzata
 
 __________________________________________________________________________________________________
 
 
-CONTRATTO ACCESSO PALESTRA
-Operazione di Sistema: AccessoPalestra(Tessera:tessera)
+CONTRATTO CreaProfiloCliente
+Operazione di Sistema: CreaProfiloCliente(nome: String, cognome: String, datadinascita:date, telefono: int, email: String)
 
-Riferimenti ai Casi d’Uso:
-AccederePalestra (controlla che all'interno dell'oggetto Tessera sia presente un iscrizione attiva e valida per l'area alla quale si vuole accedere)
+Riferimenti ai Casi d’Uso: IscriversiPalestra
 
 Pre-condizioni:
-- Il cliente deve aver sottoscritto almeno un abbonamento o un pacchetto
-- Per area premium il cliente deve aver acquistato l'accesso speciale all'area (piscina)
+- Il Sistema ha completato con successo l'elaborazione del pagamento
 
 Post-condizioni:
-- Accesso zona della palestra
-- Accesso prenotazione corsi nell'area della palestra selezionata
-
-Eccezioni:
-- Servizio non disponibile
-- Palestra chiusa
+- Un istanza c di cliente é stata creata ed inizializzata
