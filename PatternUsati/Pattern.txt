@@ -1,0 +1,14 @@
+Pagamento
+
+- Factory Method (PagamentoFactory): Incapsula la creazione di oggetti Pagamento per semplificare l'istanziazione e la logica di creazione
+
+- Adapter (PagamentiGateway): Adatta le richieste di pagamento per comunicare con banche esterne senza modificare il codice esistente.
+
+Prenotazione
+
+- Factory Method (PrenotazioneFactory): Incapsula la creazione di oggetti Prenotazione per semplificare l'istanziazione e la logica di creazione
+
+
+Tessera
+
+- Factory Method (TesseraFactory): Incapsula la creazione di oggetti Tessera per semplificare l'istanziazione e la logica di creazione

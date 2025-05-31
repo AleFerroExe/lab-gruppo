@@ -1,40 +1,36 @@
-CONTRATTO ACQUISTA PACCHETTO INGRESSI
-Operazione di Sistema: AcquistaPacchettoIngresso(PacchettoIngresso:pacchetoIngresso)
+CONTRATTO InserisciPagamento
+Operazione di Sistema: InserisciPagamento(iscrizionePalestra: IscrizionePalestra)
 
-Riferimenti ai Casi d’Uso:
-AcquistarePacchetto (Permettere all’utente (cliente o visitatore) di acquistare un pacchetto ingressi tra quelli disponibili)
+Riferimenti ai Casi d’Uso: AcquistaPacchettoIngressi
 
-Pre-condizioni:
-- Il cliente è autenticato tramite tessera, oppure il visitatore ha iniziato la procedura di iscrizione.
-- Sono presenti pacchetti ingressi disponibili nel sistema.
+Pre-condizioni:  
+- Il Cliente è autenticato  
+- Il Cliente ha selezionato un pacchetto di ingressi e ne ha confermato quantità e prezzo  
 
-Post-condizioni:
-- Il pacchetto viene caricato sulla tessera
-- Il visitatore diventa cliente
-- Il cliente resta tale
+Post-condizioni:  
+- È stata creata un’istanza p di Pagamento con:  
+  • idTransazione  
+  • idIscrizionePalestra   
+  • importo  
+  • stato = “in elaborazione”  
+  • Causale
+  • TipoMetodoPagamento
+  • Numero
+  • Titolare
+  • Scadenza
 
-Eccezioni:
-- Servizio non disponibile
-
-Modifiche:
-nel modello di dominio PacchettoIngressi diventa PacchettoIngesso
 __________________________________________________________________________________________________
 
+CONTRATTO ElaboraPagamento
+Operazione di Sistema: ElaboraPagamento(pagamento: Pagamento)
 
-CONTRATTO ACQUISTA ABBONAMENTO
-Operazione di Sistema: AcquistaAbbonamento(Abbonamento:abbonamento)
+Riferimenti ai Casi d’Uso: AcquistaPacchettoIngressi
 
-Riferimenti ai Casi d’Uso:
-AcquistareAbbonamento (Permettere all’utente (cliente o visitatore) di acquistare un abbonamento tra quelli disponibili)
+Pre-condizioni:  
+- Esiste un’istanza p di Pagamento con idTransazione e stato = “in elaborazione”  
 
-Pre-condizioni:
-- Il cliente è autenticato tramite tessera, oppure il visitatore ha iniziato la procedura di iscrizione.
-- Sono presenti abbonamenti disponibili nel sistema.
-
-Post-condizioni:
-- L'abboamento viene caricato sulla tessera dell'utente
-- Il visitatore diventa cliente
-- Il cliente resta tale
-
-Eccezioni:
-- Servizio non disponibile
+Post-condizioni:  
+- Se il pagamento risulta valido:  
+  • lo stato di p viene aggiornato a “confermato”  
+  • al Cliente vengono accreditati gli ingressi sul suo pacchetto  
+- Altrimenti lo stato di p viene aggiornato a “rifiutato”  

@@ -1,40 +1,32 @@
-CONTRATTO PRENOTAZIONE CORSO
-Operazione di Sistema: prenotaCorso(Corso:corso)
+CONTRATTO RichiediElencoServizi
+Operazione di Sistema: RichiediElencoServizi()
 
-Riferimenti ai Casi d’Uso:
-PrenotareCorso (Permette al cliente di effettuare la prenotazione di un corso specifico, se ci sono posti disponibili)
+Riferimenti ai Casi d’Uso: ConsultaServiziPropostiDallaPalestra
 
-Pre-condizioni:
-- Il cliente è autenticato tramite tessera.
-- Il cliente ha un pacchetto con almeno 1 ingresso rimasto o un abbonamento non scaduto
-- Il cliente ha accesso all'area in cui si svolge il corso
-- Il corso ha posti disponibili.
+Pre-condizioni:  
+- l'utente ha aperto la pagina “Servizi” del sito  
 
-Post-condizioni:
-- La prenotazione è registrata nel sistema.
-- Il cliente riceve la conferma della prenotazione.
-
-Eccezioni:
-- Servizio non disponibile
+Post-condizioni:  
+- Viene restituita una lista di tutti i servizi disponibili, ciascuno con:  
+  • nome  
+  • descrizione breve  
+  • orari e giorni di svolgimento  
+  • eventuale area di svolgimento  
 
 __________________________________________________________________________________________________
 
 
-CONTRATTO PER VISUALIZZARE I CORSI DISPONIBILI
-Operazione di Sistema: CorsiDisponibili()
+CONTRATTO VisualizzaDettagliServizio
+Operazione di Sistema: VisualizzaDettagliServizio(servizio: Servizio)
 
-Riferimenti ai Casi d’Uso:
-ConsultareCorsi (L’operazione consente al cliente di ottenere la lista dei corsi disponibili)
+Riferimenti ai Casi d’Uso: ConsultaServiziPropostiDallaPalestra
 
-Pre-condizioni:
-- Il cliente è autenticato tramite tessera.
-- Esiste un elenco dei corsi disponibili nel sistema
+Pre-condizioni:  
+- idServizio corrisponde a un servizio esistente nell’elenco  
 
-Post-condizioni:
--Output elenco corsi disponibili e i loro dettagli.
-
-Eccezioni:
-- Servizio non disponibile
-
-Modifica :
-implementazione caso d'uso "ConsultareCorsi"
+Post-condizioni:  
+- Vengono restituiti i dettagli completi del servizio selezionato, inclusi:  
+  • descrizione estesa  
+  • eventuali costi aggiuntivi  
+  • orari, giorni e periodo di validità  
+  • requisiti e limiti di partecipazione  

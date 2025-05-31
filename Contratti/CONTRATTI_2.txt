@@ -1,37 +1,31 @@
-CONTRATTO VISUALIZZA ELENCO DEI SERVIZI
-Operazione di Sistema: VisualizzaElencoServizi()
+CONTRATTO InserisciPrenotazioneCorso
+Operazione di Sistema: InserisciPrenotazioneCorso(cliente: Cliente, corso: Corso)
 
-Riferimenti ai Casi d’Uso:
-ConsultareServizi (Visualizzare l’elenco completo dei servizi offerti dalla palestra)
+Riferimenti ai Casi d’Uso: PrenotaUnCorso
 
 Pre-condizioni:
-- Il sistema è disponibile e raggiungibile.
-- Esiste un elenco di servizi.
+- Il Cliente è già autenticato nel sistema
+- Il Cliente ha selezionato un Corso disponibile
 
 Post-condizioni:
-- L’elenco dei servizi è stato presentato all’utente (cliente o visitatore) con nome e descrizione
-- L’utente è in grado di selezionare un servizio per ulteriori dettagli.
-
-Eccezioni:
-- Servizio non disponibile
+-Un’istanza p di Prenotazione è stata creata ed inizializzata con:
+  • idPrenotazione  
+  • cliente
+  • corso  
+  • dataEOra  
+  • stato = “inElaborazione”
 
 __________________________________________________________________________________________________
 
+CONTRATTO ElaboraPrenotazioneCorso
+Operazione di Sistema: ElaboraPrenotazioneCorso(prenotazione: Prenotazione)
 
-CONTRATTO VISUALIZZA SERVIZIO CON ULTERIORI DETTAGGI
-Operazione di Sistema: VisualizzaDettaglio(Servizio:servizio)
-
-Riferimenti ai Casi d’Uso:
-ConsultareServizi (Visualizzare l’elenco completo dei servizi offerti dalla palestra)
+Riferimenti ai Casi d’Uso: PrenotaUnCorso
 
 Pre-condizioni:
-- Il sistema è disponibile e raggiungibile.
-- Esiste un elenco di servizi.
-- L’utente ha selezionato un servizio valido dall’elenco.
-- Il servizio selezionato è presente nel sistema.
+- Esiste un’istanza p di Prenotazione con idPrenotazione e stato = “inElaborazione”
 
 Post-condizioni:
-- Il sistema mostra i dettagli del servizio: descrizione estesa, orari, prezzo, e tipologia (standard o servizio personalizzato).
-
-Eccezioni:
-- Servizio non disponibile
+- Se ci sono posti liberi nel Corso e la tessera del Cliente è valida, lo stato di p viene aggiornato a “confermata”  
+- Altrimenti lo stato di p viene aggiornato a “rifiutata”  
+- In caso di conferma, p viene definitivamente salvata nel sistema  
