@@ -1,5 +1,5 @@
 CONTRATTO InserisciPagamento
-Operazione di Sistema: InserisciPagamento(iscrizionePalestra: IscrizionePalestra)
+Operazione di Sistema: InserisciPagamento(iscrizionePalestra: IscrizionePalestra, metodoPagamento: String, estremiBancariCliente: String)
 
 Riferimenti ai Casi d’Uso: AcquistaPacchettoIngressi
 
@@ -13,11 +13,10 @@ Post-condizioni:
   • idIscrizionePalestra   
   • importo  
   • stato = “in elaborazione”  
-  • Causale
-  • TipoMetodoPagamento
-  • Numero
-  • Titolare
-  • Scadenza
+  • causale
+  • metodoPagamento
+  • estremiBancariCliente
+
 
 __________________________________________________________________________________________________
 

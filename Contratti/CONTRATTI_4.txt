@@ -17,7 +17,7 @@ ________________________________________________________________________________
 
 
 CONTRATTO VisualizzaDettagliServizio
-Operazione di Sistema: VisualizzaDettagliServizio(servizio: Servizio)
+Operazione di Sistema: RichiediDettagliServizio(servizio: Servizio)
 
 Riferimenti ai Casi d’Uso: ConsultaServiziPropostiDallaPalestra
 
