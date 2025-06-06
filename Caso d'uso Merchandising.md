@@ -1,0 +1,16 @@
+# Caso d’Uso: InserimentoMerchandising
+
+| **Campo**                                | **Descrizione**                                                                                                                                                          |
+|------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Nome caso d'uso**                      | InserimentoMerchandising                                                                                                                                                  |
+| **Portata**                              | Gestione palestra                                                                                                                                                         |
+| **Livello**                              | Obbiettivo utente - Livello Amministratore di sistema                                                                                                                      |
+| **Attore primario**                      | Amministratore                                                                                                                                                             |
+| **Parti interessate e interessi**        | - **Sistema**: deve registrare correttamente il prodotto con tutti i suoi dati e renderlo visibile agli utenti <br> - **Amministratore**: desidera inserire nel sistema i prodotti di merchandising per essere acquistati da un utente |
+| **Pre-condizioni**                       | - L’Amministratore è autenticato e autorizzato all'inserimento <br> - Il sistema è operativo e accessibile                                                                 |
+| **Garanzia di successo**                 | - Il nuovo prodotto è stato aggiunto al catalogo <br> - Gli utenti possono visualizzarlo e acquistarlo                                                                    |
+| **Scenario principale di successo**      | 1. L’amministratore accede al sistema <br> 2. Permette l’inserimento di un nuovo prodotto. <br> 3. Il sistema verifica che il prodotto non sia attualmente presente nel database <br> 4. L’amministratore conferma l’inserimento. <br> 5. Il sistema registra il prodotto e invia una conferma con i dettagli. |
+| **Estensione**                           | - **3a** Il prodotto è già stato caricato (fallimento)                                                                                                                    |
+| **Requisiti speciali**                   | - Il sistema aggiorna la disponibilità prodotto <br> - Il sistema deve essere accessibile in tempo reale da dispositivi mobili e desktop                                    |
+| **Elenco delle variabili tecnologiche e dati** | - Interfaccia utente: inserimento dati prodotto. <br> - Output conferma: Conferma dati inseriti                                                                             |
+| **Frequenza di ripetizione**             | - Il sistema deve garantire la gestione dell’inserimento anche in caso di errori di rete o rallentamenti temporanei                                                       |
