@@ -2,7 +2,7 @@
 
 | **Campo**                                | **Descrizione**                                                                                                                                                          |
 |------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Nome caso d'uso**                      | InserimentoMerchandising                                                                                                                                                  |
+| **Nome caso d'uso**                      | AggiuntaMerchandising                                                                                                                                                  |
 | **Portata**                              | Gestione palestra                                                                                                                                                         |
 | **Livello**                              | Obbiettivo utente - Livello Amministratore di sistema                                                                                                                      |
 | **Attore primario**                      | Amministratore                                                                                                                                                             |
