@@ -14,4 +14,3 @@
 | **Requisiti speciali**                   | - Aggiornamento database ogni volta che Trainer o Cliente caricano dati                                                                                                   |
 | **Elenco variabili tecnologiche e dati** | - Il Trainer ha un’interfaccia per ricevere, commentare i dati e caricarli                                                                                                |
 | **Frequenza di ripetizione**             | - Mensile per ogni Cliente ma potrebbe interrompersi in ogni momento come non interrompersi mai                                                                          |
-| **Varie**                                | *(nessuna informazione specifica)*                                                                                                                                        |
