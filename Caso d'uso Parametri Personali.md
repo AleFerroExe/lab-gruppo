@@ -14,4 +14,3 @@
 | **Requisiti speciali**                   | - Aggiornamento database ogni volta che Trainer o Cliente caricano dati                                                                                                   |
 | **Elenco variabili tecnologiche e dati** | - Interfaccia grafica per il cliente per poter caricare i dati e ricevere le valutazioni                                                                                 |
 | **Frequenza di ripetizione**             | - Mensile con possibilità di interruzione in qualsiasi momento                                                                                                            |
-| **Varie**                                | *(nessuna informazione specifica)*                                                                                                                                        |
