@@ -1,8 +1,8 @@
-# Caso d’Uso: CompilaQuestionario
+# Caso d’Uso: CompilareQuestionario
 
 | **Campo**                                | **Descrizione**                                                                                                                                                          |
 |------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Nome caso d'uso**                      | CompilaQuestionario                                                                                                                                                       |
+| **Nome caso d'uso**                      | CompilareQuestionario                                                                                                                                                       |
 | **Portata**                              | Gestione palestra                                                                                                                                                         |
 | **Livello**                              | Obbiettivo utente                                                                                                                                                         |
 | **Attore primario**                      | Cliente                                                                                                                                                                   |

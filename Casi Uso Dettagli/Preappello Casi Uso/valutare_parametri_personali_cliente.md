@@ -1,8 +1,8 @@
-# Caso d’Uso: ValutaParametriPersonaliCliente
+# Caso d’Uso: ValutareParametriPersonaliCliente
 
 | **Campo**                                | **Descrizione**                                                                                                                                                          |
 |------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Nome Del Caso d’Uso**                  | ValutaParametriPersonaliCliente                                                                                                                                           |
+| **Nome Del Caso d’Uso**                  | ValutareParametriPersonaliCliente                                                                                                                                           |
 | **Portata**                              | Gestione Palestra                                                                                                                                                         |
 | **Livello**                              | Obbiettivo utente                                                                                                                                                         |
 | **Attore Primario**                      | Trainer                                                                                                                                                                   |

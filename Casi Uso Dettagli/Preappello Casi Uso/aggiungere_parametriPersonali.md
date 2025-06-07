@@ -1,8 +1,8 @@
-# Caso d’Uso: AggiungiParametriPersonali    
+# Caso d’Uso: AggiungereParametriPersonali    
 
 | **Campo**                                | **Descrizione**                                                                                                                                                          |
 |------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Nome Del Caso d’Uso**                  | AggiungiParametriPersonali                                                                                                                                              |
+| **Nome Del Caso d’Uso**                  | AggiungereParametriPersonali                                                                                                                                              |
 | **Portata**                              | Gestione Palestra                                                                                                                                                         |
 | **Livello**                              | Obbiettivo utente                                                                                                                                                         |
 | **Attore Primario**                      | Cliente                                                                                                                                                                   |

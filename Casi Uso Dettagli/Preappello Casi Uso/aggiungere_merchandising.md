@@ -1,8 +1,8 @@
-# Caso d’Uso: AggiungiMerchandising
+# Caso d’Uso: AggiungereMerchandising
 
 | **Campo**                                | **Descrizione**                                                                                                                                                          |
 |------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Nome caso d'uso**                      | AggiungiMerchandising                                                                                                                                                  |
+| **Nome caso d'uso**                      | AggiungereMerchandising                                                                                                                                                  |
 | **Portata**                              | Gestione palestra                                                                                                                                                         |
 | **Livello**                              | Obbiettivo utente - Livello Amministratore di sistema                                                                                                                      |
 | **Attore primario**                      | Amministratore                                                                                                                                                             |
