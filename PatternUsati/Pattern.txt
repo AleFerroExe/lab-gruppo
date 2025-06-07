@@ -12,3 +12,18 @@ Prenotazione
 Tessera
 
 - Factory Method (TesseraFactory): Incapsula la creazione di oggetti Tessera per semplificare l'istanziazione e la logica di creazione
+
+
+Parametri personali
+
+- Factory Method: Incapsula la creazione di oggetti ParametriPersonali per semplificare l'istanziazione e la logica di creazione
+
+
+Questinario
+
+- Factory Method: Incapsula la creazione di oggetti RispostaQuestionario per semplificare l'istanziazione e la logica di creazione
+
+
+Prodotti
+
+- Factory Method: Incapsula la creazione di oggetti Prodotto per semplificare l'istanziazione e la logica di creazione
