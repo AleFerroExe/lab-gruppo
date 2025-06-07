@@ -1,0 +1,18 @@
+Contratto: InserisciRisposteQuestionario
+
+Operazione: InserisciRisposteQuestionario(cliente: Cliente, questionario: Questionario, risposte: Risposta[])
+
+Riferimenti: Use Cases: CompilareQuestionario
+
+Pre-condizioni:
+
+Il Cliente cliente è registrato nel sistema e ha accesso al questionario.
+Il Questionario questionario esiste nel sistema.
+Le risposte risposta devono essere fornite per tutte le domande chiuse del questionario.
+
+Post-condizioni:
+
+È stata creata una nuova istanza di risposte al questionario associata al Cliente cliente e al Questionario questionario = creaRisposteQuestionario(Cliente cliente, Risposte risposte).
+Le risposte fornite sono state associate al Questionario = ritornaRisposteQuestionario.
+La nuova risposta al questionario è stata aggiunta al sistema attraverso la funzione = aggiungiRisposteQuestionario(RispostaQuestionario).
+Il sistema ha confermato l'aggiunta delle risposte attraverso la funzione = ConfermaAggiuntaRisposte.

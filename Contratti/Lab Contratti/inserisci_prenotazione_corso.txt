@@ -1,0 +1,31 @@
+CONTRATTO InserisciPrenotazioneCorso
+Operazione di Sistema: InserisciPrenotazioneCorso(cliente: Cliente, corso: Corso)
+
+Riferimenti ai Casi d’Uso: PrenotaUnCorso
+
+Pre-condizioni:
+- Il Cliente è già autenticato nel sistema
+- Il Cliente ha selezionato un Corso disponibile
+
+Post-condizioni:
+-Un’istanza p di Prenotazione è stata creata ed inizializzata con:
+  • idPrenotazione  
+  • cliente
+  • corso  
+  • dataEOra  
+  • stato = “inElaborazione”
+
+__________________________________________________________________________________________________
+
+CONTRATTO ElaboraPrenotazioneCorso
+Operazione di Sistema: ElaboraPrenotazioneCorso(prenotazione: Prenotazione)
+
+Riferimenti ai Casi d’Uso: PrenotaUnCorso
+
+Pre-condizioni:
+- Esiste un’istanza p di Prenotazione con idPrenotazione e stato = “inElaborazione”
+
+Post-condizioni:
+- Se ci sono posti liberi nel Corso e la tessera del Cliente è valida, lo stato di p viene aggiornato a “confermata”  
+- Altrimenti lo stato di p viene aggiornato a “rifiutata”  
+- In caso di conferma, p viene definitivamente salvata nel sistema  

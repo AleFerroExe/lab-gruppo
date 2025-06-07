@@ -1,0 +1,18 @@
+Parametri personali
+
+- Factory Method (ParametriPersonaliFactory) : Incapsula la creazione di oggetti ParametriPersonali per semplificare l'istanziazione e la logica di creazione
+
+
+Valutazione Parametri Personali
+
+- Factory Method (ValutazioneParametriPersonaliFactory): Incapsula la creazione di oggetti Valutazione Parametri Personali per semplificare l'istanziazione e la logica di creazione
+
+
+Questionario
+
+- Factory Method (RisposteQuestionarioFactory): Incapsula la creazione di oggetti RispostaQuestionario per semplificare l'istanziazione e la logica di creazione
+
+
+Prodotti
+
+- Factory Method (prodottoFactory): Incapsula la creazione di oggetti Prodotto per semplificare l'istanziazione e la logica di creazione
