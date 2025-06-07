@@ -1,0 +1,35 @@
+CONTRATTO InserisciPagamento
+Operazione di Sistema: InserisciPagamento(iscrizionePalestra: IscrizionePalestra, metodoPagamento: String, estremiBancariCliente: String)
+
+Riferimenti ai Casi d’Uso: AcquistaPacchettoIngressi
+
+Pre-condizioni:  
+- Il Cliente è autenticato  
+- Il Cliente ha selezionato un pacchetto di ingressi e ne ha confermato quantità e prezzo  
+
+Post-condizioni:  
+- È stata creata un’istanza p di Pagamento con:  
+  • idTransazione  
+  • idIscrizionePalestra   
+  • importo  
+  • stato = “in elaborazione”  
+  • causale
+  • metodoPagamento
+  • estremiBancariCliente
+
+
+__________________________________________________________________________________________________
+
+CONTRATTO ElaboraPagamento
+Operazione di Sistema: ElaboraPagamento(pagamento: Pagamento)
+
+Riferimenti ai Casi d’Uso: AcquistaPacchettoIngressi
+
+Pre-condizioni:  
+- Esiste un’istanza p di Pagamento con idTransazione e stato = “in elaborazione”  
+
+Post-condizioni:  
+- Se il pagamento risulta valido:  
+  • lo stato di p viene aggiornato a “confermato”  
+  • al Cliente vengono accreditati gli ingressi sul suo pacchetto  
+- Altrimenti lo stato di p viene aggiornato a “rifiutato”  
